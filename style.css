@@ -6,3 +6,15 @@
     
 }
 
+.links{
+    display: flex;
+    justify-content: center;
+
+}
+
+#Drawing{
+    width: 500px;
+    height: 60hv;
+    border-radius: 50%;
+    
+}
