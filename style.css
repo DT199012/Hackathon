@@ -2,12 +2,12 @@
     --clr-dark: #090622;
     --clr-light: white;
     --clr-color1: red; 
-    --clr-color2: blue;
+    --clr-color2: rgb(9, 9, 47);
     
 }
 
 .navbar{
-    background: #131313;
+    background: var(--clr-color2);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -18,9 +18,21 @@
     z-index: 999;
 }
 
+.container{
+    display:flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 950;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
 .links{
     display: flex;
-    align-items: center;
+    position: relative;
+    left: 100%;
     list-style: none;
     text-align: center;
 }
