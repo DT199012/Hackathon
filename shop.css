@@ -2,3 +2,8 @@
     height: 80px;
     font-size: 1.2rem;;
 }
+
+.border {
+    border-width: 2px !important;
+    border-color: rgb(0, 0, 0) !important;
+}
