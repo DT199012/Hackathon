@@ -67,6 +67,7 @@ window.addEventListener("mousemove", (e) => {
 
 function doneBtn(){
     solution.classList.add('active');
+
 }
 
 function nextPrompt(){
