@@ -6,18 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>My Website</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">        
-        <title>My Website</title>
+        <link rel="stylesheet" href="./index.css">        
     </head>
     <body>
-        <nav class="navbar navbar-light bg-white navbar-expand-sm">
+        <nav class="navbar navbar-light navbar-expand-sm">
             <a class="navbar-brand" href="#">Byte Sized Beavers</a>
-            <ul id="myNavbar" class="navbar-nav ml-auto">
+            <ul id="myNavbar" class="navbar-nav mr-auto ml-5">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Grade Level</a>
+                    <a class="nav-link" href="./shop.html">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Games</a>
@@ -26,11 +25,16 @@
                     <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    Your Points: 0
+                </li>
+            </ul>
         </nav>
 
         <div class="jumbotron rounded-0">
             <h1 class="text-center display-4">Our Mission</h1>
-            <p class="lead text-center">This is a hub for playing games for students to learn about STEM. Many students before choosing a career, don't feel like STEM is a career that is interesting to join. These are games that are meant to have fun but implement some sort of STEM inside and are a branch to teach students about STEM.</p>
+            <p id="missionText" class="lead text-center">This is a hub for playing games for students to learn about STEM. Many students before choosing a career, don't feel like STEM is a career that is interesting to join. These are games that are meant to have fun but implement some sort of STEM inside and are a branch to teach students about STEM.</p>
         </div>
 
         <div class="container">
