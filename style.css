@@ -1,22 +1,17 @@
-:root{
-    --clr-dark: #090622;
-    --clr-light: white;
-    --clr-color1: red; 
-    --clr-color2: rgb(9, 9, 47);
-}
-
 .navbar{
-    background: var(--clr-color2);
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    font-size: 1.2rem;;
 }
 
+.navbar-nav{
+    margin-right: 185px
+}
+
+.jumbotron{
+    background-color: rgb(176, 241, 241);
+}
+
+/*
 .container{
     display:flex;
     justify-content: space-between;
