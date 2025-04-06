@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-light navbar-expand-sm">
             <a class="navbar-brand" href="#">Byte Sized Beavers</a>
-            <ul id="myNavbar" class="navbar-nav mr-auto ml-5">
+            <ul id="myNavbar" class="navbar-nav mr-auto ml-5 align-items-center">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -24,13 +24,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Settings</a>
                 </li>
+                <li class="nav-item">
+                    <form id="userForm">
+                        <input id="email" type="email" name="email" placeholder="Email" required />
+                        <input id="user" type="text" name="username" placeholder="Username" required />
+                        <button class="signin" type="submit">Sign In</button>
+                      </form>
+                </li>
             </ul>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <div id="score-board">
                         Points: <span id="points">0</span>
-                      </div>
-                      
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -153,6 +159,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

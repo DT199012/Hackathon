@@ -89,18 +89,19 @@ window.addEventListener("mousemove", (e) => {
 
 let points = 0;
 
+
+
 function doneBtn(){
+
     if (promptNum < prompts.length) {
         document.getElementById("prompt-img").src = pic();
         solution.classList.add('active');
         document.getElementById("prompt-text").innerText = descriptions[promptNum];
         box.classList.add('active');
 
-        // Add points per completed drawing
         points += 10;
-        localStorage.setItem('drawingPoints', points); // Save progress
+        localStorage.setItem('drawingPoints', points); 
 
-        // Update prompt for next round
         setTimeout(() => {
             solution.classList.remove('active');
             ctx.clearRect(0, 0, canvas.width, canvas.height); 
@@ -108,7 +109,7 @@ function doneBtn(){
             if (promptNum < prompts.length) {
                 document.getElementById("prompt").innerText = prompts[promptNum];
             }
-        }, 6000);
+        }, 100000);
     }
 }
 
