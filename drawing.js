@@ -2,8 +2,10 @@ const canvas = document.getElementById("canvas");
 const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
+const solution = document.querySelector('.ourPrompt');
 const prompts  = [1,2,3,4,5]
 //["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
+
 
 var theColor = '';
 var lineW = 5;
@@ -63,9 +65,16 @@ window.addEventListener("mousemove", (e) => {
     prevY = currentY;
 });
 
-function givePrompts(){
-    //document.querySelector(".ourPrompt").
+function doneBtn(){
+    document.querySelector(".ourPrompt").
+    solution.classList.toggle('active');
+
+}
+function nextPrompt(){
     if(promptNum !== prompts.length){
+        //move the card and then update the card description, image
+        document.querySelector(".ourPrompt").
+        document.querySelector(".ourPrompt").
         document.querySelector(".prompts").innerHTML = prompts[promptNum];
         console.log(promptNum);
         promptNum++;
@@ -84,4 +93,5 @@ let crossBtn = document.querySelector(".cross");
 crossBtn.addEventListener("click", () => {
     doneStatus = true;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    nextPrompt();
 });
