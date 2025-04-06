@@ -14,7 +14,9 @@
 }
 
 .jumbotron p{
-    padding: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 40px;
 }
 
 .jumbotron h2{
@@ -33,4 +35,36 @@
   .carousel-control-next-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e") !important;
   }
+  
+#email, #user{
+    width: 150px;
+    padding: 5px;
+    margin: 12.5px 0 12.5px 0;
+    display: inline;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    border-width: 2px;
+    border-color: rgba(85, 85, 85, 0.215);
+    border-style: solid;
+    border-radius: 4px;
+}
 
+#userForm{
+    padding-left: 40px;
+}
+
+.signin{
+    width: 150px;
+    padding: 5px;
+    background-color: #cd8110;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signin:hover{
+    background-color: #a76b0d;
+}

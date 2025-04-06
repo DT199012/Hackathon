@@ -10,10 +10,12 @@
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-sm">
+
             <a class="navbar-brand" href="./index.html">
                 <img src="./images/Untitled.png" width="65" height="65">
             </a>
-            <ul id="myNavbar" class="navbar-nav mr-auto ml-5">
+            <ul id="myNavbar" class="navbar-nav mr-auto ml-5 align-items-center">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
@@ -26,22 +28,28 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Settings</a>
                 </li>
+                <li class="nav-item">
+                    <form id="userForm">
+                        <input id="email" type="email" name="email" placeholder="Email" required />
+                        <input id="user" type="text" name="username" placeholder="Username" required />
+                        <button class="signin" type="submit">Sign In</button>
+                      </form>
+                </li>
             </ul>
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <div id="score-board">
                         Points: <span id="points">0</span>
-                      </div>
-                      
+                    </div>
                 </li>
             </ul>
         </nav>
 
         <div class="jumbotron rounded-0">
             <h1 class="text-center display-4">Our Mission</h1>
-            <p class="lead text-center">This is a learning program for students of all levels to play games and learn about STEM while playing fun games. Each game has it's own touch where STEM is implemented but isn't focused on the STEM in order for the game to still be enjoyable for students. Many new generations of students are choosing to not pursue STEM as a career option because what they are learning in school which is STEM related is boring. This app uses a point system to encourage students to keep learning which can be used in the shop to donate money to real world issues, help marine life fight pollution, or help plant trees all across the world. </p>
+            <p class="lead text-center">Our mission is to increase the amount of students who want to pursue STEM careers. We will accomplish this by imersing kids into fun games and add a little bit of STEM learning in there in order for them to have fun and learn that STEM isn't boring. Understanding how to think like an engineer can help children problem solve real world issues at a young age.</p>
             <h2 class="text-center display-4">Points</h2>
-            <p class="lead text-center">After finishing each game by using problem solving skills, students are able to earn points which can be used in the shop. After earning a certain amount of points, students can use their points to help with real world problems by donating towards issues related to deforestation, marine life, and to support natural disaster survivors.  </p>
+            <p class="lead text-center">Students can earn points from finishing each game which can be used to help support issues around the world like deforestation, pollution in the oceans, and feeding America.</p>
         </div>
 
         <div class="container">
@@ -153,6 +161,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
