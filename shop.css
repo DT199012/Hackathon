@@ -7,3 +7,36 @@
     border-width: 2px !important;
     border-color: rgb(0, 0, 0) !important;
 }
+
+#email, #user{
+    width: 150px;
+    padding: 5px;
+    margin: 12.5px 0 12.5px 0;
+    display: inline;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    border-width: 2px;
+    border-color: rgba(85, 85, 85, 0.215);
+    border-style: solid;
+    border-radius: 4px;
+}
+
+#userForm{
+    padding-left: 40px;
+}
+
+.signin{
+    width: 150px;
+    padding: 5px;
+    background-color: #cd8110;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signin:hover{
+    background-color: #a76b0d;
+}
