@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 const solution = document.querySelector('.ourPrompt');
-const prompts  = ["Draw a volcano with lava","Draw an applpe falling from a tree","Draw a pizza slice","Draw a face"]
+const prompts  = ["Draw a volcano with lava","Draw an apple falling from a tree","Draw a pizza slice","Draw a face",""]
 //["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
 
 
@@ -74,23 +74,26 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function doneBtn(){
-    solution.classList.add('active');
-    if (promptNum < picture.length) {
+    if (promptNum < prompts.length) {
         document.getElementById("prompt-img").src = `/images/${picture[promptNum]}.png`;
-        document.querySelector(".description").innerText = prompts[promptNum];
+        solution.classList.add('active');
+        
     }
 }
 
 function nextPrompt(){
-    if(promptNum < prompts.length - 1){
+    promptNum++;
+    if(promptNum < prompts.length){
         solution.classList.remove('active');
-        promptNum++;
+        ctx.clearRect(0, 0, canvas.width, canvas.height); 
+        document.getElementById("prompt").innerText = prompts[promptNum-1];
         return true;
     } else {
         solution.style.display = "none";
         return false;
     }
 }
+
 
 
 let clearBtn = document.querySelector(".clear");
