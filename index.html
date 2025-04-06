@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+    <form id="userForm">
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="username" placeholder="Username" required />
+        <button class="submit" type="submit">Submit</button>
+      </form>
+      
+      <script>
+        document.getElementById("userForm").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const email = e.target.email.value;
+          const username = e.target.username.value;
+      
+          const res = await fetch("http://localhost:3000/save-user", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, username }),
+          });
+      
+          const msg = await res.text();
+          alert(msg);
+        });
+      </script>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>My Website</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="./index.css">        
+        <link rel="stylesheet" href="./style.css">        
+        <title>My Website</title>
     </head>
     <body>
-        <nav class="navbar navbar-light navbar-expand-sm">
+        <nav class="navbar navbar-light bg-white navbar-expand-sm">
             <a class="navbar-brand" href="#">Byte Sized Beavers</a>
-            <ul id="myNavbar" class="navbar-nav mr-auto ml-5">
+            <ul id="myNavbar" class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./shop.html">Shop</a>
+                    <a class="nav-link" href="#">Grade Level</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Games</a>
@@ -25,36 +48,24 @@
                     <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    Your Points: 0
-                </li>
-            </ul>
         </nav>
 
         <div class="jumbotron rounded-0">
             <h1 class="text-center display-4">Our Mission</h1>
-            <p class="lead text-center">This is a learning program for students of all levels to play games and learn about STEM while playing fun games. Each game has it's own touch where STEM is implemented but isn't focused on the STEM in order for the game to still be enjoyable for students. Many new generations of students are choosing to not pursue STEM as a career option because what they are learning in school which is STEM related is boring. This app uses a point system to encourage students to keep learning which can be used in the shop to donate money to real world issues, help marine life fight pollution, or help plant trees all across the world. </p>
-            <h2 class="text-center display-4">Points</h2>
-            <p class="lead text-center">After finishing each game by using problem solving skills, students are able to earn points which can be used in the shop. After earning a certain amount of points, students can use their points to help with real world problems by donating towards issues related to deforestation, marine life, and to support natural disaster survivors.  </p>
+            <p class="lead text-center">This is a hub for playing games for students to learn about STEM. Many students before choosing a career, don't feel like STEM is a career that is interesting to join. These are games that are meant to have fun but implement some sort of STEM inside and are a branch to teach students about STEM.</p>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col">
                     <h4 class="text-center">K - 3rd Grade</h4>
-                    <div id="carouselK-3rd" class="carousel slide" data-ride="carousel" data-interval="50000">
+                    <div id="carouselK-3rd" class="carousel slide" data-ride="carousel" data-interval="100000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a href="./game1.html">
-                                    <img class="d-block w-100" src="./images/painting.png" alt="First slide">
-                                </a>
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/cards.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/maze.png" alt="Second slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="Second slide">
                             </div>
                         </div>
 
@@ -71,16 +82,13 @@
                 </div>
                 <div class="col">
                     <h4 class="text-center">3rd - 5th Grade</h4>
-                    <div id="carousel3rd-5th" class="carousel slide" data-ride="carousel" data-interval="50000">
+                    <div id="carousel3rd-5th" class="carousel slide" data-ride="carousel" data-interval="100000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="./images/chess.png" alt="First slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/2048.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/poker.png" alt="Second slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="Second slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carousel3rd-5th" role="button" data-slide="prev">
@@ -96,16 +104,13 @@
                 <div class="w-100 pt-5"></div>
                 <div class="col">
                     <h4 class="text-center">6th - 8th Grade</h4>
-                    <div id="carousel6th-8th" class="carousel slide" data-ride="carousel" data-interval="50000">
+                    <div id="carousel6th-8th" class="carousel slide" data-ride="carousel" data-interval="100000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="./images/sudoku.png" alt="First slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/mountain.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/lake.png" alt="Second slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="Second slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carousel6th-8th" role="button" data-slide="prev">
@@ -120,16 +125,13 @@
                 </div>
                 <div class="col">
                     <h4 class="text-center">High Schoolers</h4>
-                    <div id="carouselHighSchool" class="carousel slide" data-ride="carousel" data-interval="50000">
+                    <div id="carouselHighSchool" class="carousel slide" data-ride="carousel" data-interval="100000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="./images/turtle.PNG" alt="First slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/fish.png" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="./images/water.png" alt="Second slide">
+                                <img class="d-block w-100" src="https://content.codecademy.com/courses/learn-bootstrap-components/garden-slide2.jpg" alt="Second slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselHighSchool" role="button" data-slide="prev">
@@ -150,6 +152,5 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
     </body>
 </html>
