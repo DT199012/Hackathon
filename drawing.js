@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 const solution = document.querySelector('.ourPrompt');
-const prompts  = [1,2,3,4,5]
+const prompts  = ["Draw a volcano with lava","Draw an applpe falling from a tree","Draw a pizza slice","Draw a face"]
 //["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
 
 
@@ -14,6 +14,14 @@ let prevY = null;
 let draw = false;
 let doneStatus = false;
 let promptNum = 0;
+let picture = ["house", "volcano", "apple", "pizza", "Face"];
+
+
+function pic(){
+    return`/images/${picture[promptNum]}.png`;
+}
+
+
 
 body.style.backgroundColor = "#FFFFFF";
 var theInput = document.getElementById("favcolor");
@@ -67,20 +75,23 @@ window.addEventListener("mousemove", (e) => {
 
 function doneBtn(){
     solution.classList.add('active');
-
+    if (promptNum < picture.length) {
+        document.getElementById("prompt-img").src = `/images/${picture[promptNum]}.png`;
+        document.querySelector(".description").innerText = prompts[promptNum];
+    }
 }
 
 function nextPrompt(){
-    if(promptNum !== prompts.length){
-        //move the card and then update the card description, image
+    if(promptNum < prompts.length - 1){
         solution.classList.remove('active');
-        document.querySelector(".prompts").innerHTML = prompts[promptNum];
-        console.log(promptNum);
         promptNum++;
-        return true
+        return true;
+    } else {
+        solution.style.display = "none";
+        return false;
     }
-    return false
 }
+
 
 let clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => {
