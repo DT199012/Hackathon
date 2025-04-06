@@ -155,12 +155,17 @@ input[type="color"]{
 .ourPrompt{
     width: 600px;
     height: 60vh;
+    border-radius: 1rem;
     position: absolute;
-    left: 50%;
-    bottom: 50%;
-    z-index: -999;
+    left: 15%;
+    bottom: 5000%;
 }
 
-.ourPrompt.active{
-    z-index: 999;
+.active{
+    width: 600px;
+    height: 60vh;
+    border-radius: 1rem;
+    position: absolute;
+    left: 15%;
+    bottom: 50%;
 }

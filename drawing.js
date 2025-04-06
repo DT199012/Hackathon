@@ -66,15 +66,13 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function doneBtn(){
-    document.querySelector(".ourPrompt").
-    solution.classList.toggle('active');
-
+    solution.classList.add('active');
 }
+
 function nextPrompt(){
     if(promptNum !== prompts.length){
         //move the card and then update the card description, image
-        document.querySelector(".ourPrompt").
-        document.querySelector(".ourPrompt").
+        solution.classList.remove('active');
         document.querySelector(".prompts").innerHTML = prompts[promptNum];
         console.log(promptNum);
         promptNum++;
