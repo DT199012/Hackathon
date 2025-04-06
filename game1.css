@@ -152,3 +152,15 @@ input[type="color"]{
     margin-right: -4px;
 }
 
+.ourPrompt{
+    width: 600px;
+    height: 60vh;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    z-index: -999;
+}
+
+.ourPrompt.active{
+    z-index: 999;
+}
