@@ -25,7 +25,7 @@ let picture = ["house", "volcano", "apple", "pizza", "Face"];
 
 
 function pic(){
-    return`/images/${picture[promptNum]}.png`;
+    return`./images/${picture[promptNum]}.png`;
 }
 
 function pts(){
