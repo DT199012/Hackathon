@@ -2,7 +2,8 @@ const canvas = document.getElementById("canvas");
 const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
-const prompts  = ["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
+const prompts  = [1,2,3,4,5]
+//["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
 
 var theColor = '';
 var lineW = 5;
@@ -10,6 +11,7 @@ let prevX = null;
 let prevY = null;
 let draw = false;
 let doneStatus = false;
+let promptNum = 0;
 
 body.style.backgroundColor = "#FFFFFF";
 var theInput = document.getElementById("favcolor");
@@ -62,10 +64,14 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function givePrompts(){
-    for(prompt in prompts){
-        background.querySelector(".prompt").innerHTML = prompt;
-        while(!doneStatus){}
+    //document.querySelector(".ourPrompt").
+    if(promptNum !== prompts.length){
+        document.querySelector(".prompts").innerHTML = prompts[promptNum];
+        console.log(promptNum);
+        promptNum++;
+        return true
     }
+    return false
 }
 
 let clearBtn = document.querySelector(".clear");
@@ -73,7 +79,9 @@ clearBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-let doneBtn = document.querySelector(".done");
-doneBtn.addEventListener("click", () => {
+
+let crossBtn = document.querySelector(".cross");
+crossBtn.addEventListener("click", () => {
     doneStatus = true;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 });

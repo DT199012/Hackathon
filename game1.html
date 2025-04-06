@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="./game1.css">
     </head>
     <body>
+        <div class="ourPrompt">
+            <card>
+                <div class="image"><img src="/"></div>
+                <div class="description"></div>
+                <button class="cross" onclick="">X</div>
+            </card>
+
+        </div>
         <canvas id="canvas"></canvas>
         <div class="prompts">
-            <output id="prompt" placeholder="Prompt: "></output>
-            <p>Prompt:</p>
+            <output id="prompt" placeholder='Prompts' type="text">Draw a landscape with different shapes</output>
         </div>
         <div class="nav">
             <div class="clr" data-clr="black"></div>
@@ -23,7 +30,7 @@
             <div class="clr" data-clr="yellow"></div>
             <div class="clr" data-clr="white"></div>
             <button class="clear">Clear</button>
-            <button class="done">Done</button>
+            <button class="done" onclick="givePrompts()">Done</button>
             <input type="color" value="#FFFFFF" id="favcolor" placeholder="favcolor">
             <input type="range" name="ageInputName" id="ageInputId" value="5" min="1" max="10" oninput="ageOutputId.value = ageInputId.value" placeholder="6">
             <output id="ageOutputId">5</output>
