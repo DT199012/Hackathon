@@ -5,7 +5,13 @@ canvas.width = window.innerWidth;
 const solution = document.querySelector('.ourPrompt');
 const prompts  = ["Draw a volcano with lava","Draw an apple falling from a tree","Draw a pizza slice","Draw a face",""]
 //["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
-
+const descriptions = [`This is an example of a house.
+    There are different shapes such as trinagles for the roof, square for the body, rectangle for the door, and a circle for the sun.
+    Let's look at another one.`, `This is a picture of a volcano.
+    Volcanos erupt and lava comes out of it. Lava is very hot and will be painful to touch! But this is all a part of nature.`, `This is an image of an apple falling from a tree.
+    The apple falls down due to gravity. Gravity is a natural phenomenon. In fact, we are still on the ground because of it. Imagine if gravity didn't exist! We all would be flying.`, `This is an image of a pizza.
+    The shape of a pizza is a circle. The circle can be split up into different slices. These slices can be represented as a fraction of a whole, which you will learn later. For now, imagine you get 2 slices from a 16 slices pizza. This can be represented as 2/16 in fractions.`,
+`This is an image of a face. A face has eyes for seeing, nose for smelling, ears for hearing, mouth for tasting and skin for feeling. These are the five senses.`];
 
 var theColor = '';
 var lineW = 5;
@@ -77,7 +83,7 @@ function doneBtn(){
     if (promptNum < prompts.length) {
         document.getElementById("prompt-img").src = `/images/${picture[promptNum]}.png`;
         solution.classList.add('active');
-        
+        document.querySelector(".prompt-text").innerHTML = descriptions[promptNum];
     }
 }
 
