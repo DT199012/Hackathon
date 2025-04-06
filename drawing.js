@@ -3,6 +3,7 @@ const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 const solution = document.querySelector('.ourPrompt');
+const box = document.querySelector('.prompt_text');
 const prompts  = ["Draw a volcano with lava","Draw an apple falling from a tree","Draw a pizza slice","Draw a face",""];
 const descriptions = [`This is an example of a house.
     There are different shapes such as trinagles for the roof, square for the body, rectangle for the door, and a circle for the sun.
@@ -82,7 +83,8 @@ function doneBtn(){
     if (promptNum < prompts.length) {
         document.getElementById("prompt-img").src = `/images/${picture[promptNum]}.png`;
         solution.classList.add('active');
-        document.querySelector(".prompt-text").innerHTML = descriptions[promptNum];
+        document.getElementById("prompt-text").innerText = descriptions[promptNum];
+        box.classList.add('active');
     }
 }
 
