@@ -1,0 +1,4 @@
+const userInfo = {
+    username: null
+    
+}

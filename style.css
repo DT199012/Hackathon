@@ -1,0 +1,108 @@
+.navbar{
+    height: 80px;
+    font-size: 1.2rem;;
+}
+
+.navbar-nav{
+    margin-right: 185px
+}
+
+.jumbotron{
+    background-color: rgb(176, 241, 241);
+}
+
+.submit{
+    cursor: pointer;
+}
+/*
+.container{
+    display:flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 950;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.links{
+    display: flex;
+    position: relative;
+    left: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.navbarlinks{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+#Drawing{
+    border-radius: 2rem;
+    border-color: #090622;
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url('/images/minion.png');
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+#tictactoe{
+    border-radius: 2rem;
+    border-color: #090622;
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url('/images/minion.png');
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.games{
+    background: var(--clr-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120vh;
+}
+
+#play{
+    position: absolute;
+    border-radius: 2rem;
+    border-image: white;
+    left: 20%;
+    bottom: 10%;
+    width: 200px;
+    background-color: #630a04;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.k3{
+    position: relative;
+    width: 2000px;
+}

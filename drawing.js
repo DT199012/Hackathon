@@ -13,6 +13,7 @@ const descriptions = [`This is an example of a house.
     The shape of a pizza is a circle. The circle can be split up into different slices. These slices can be represented as a fraction of a whole, which you will learn later. For now, imagine you get 2 slices from a 16 slices pizza. This can be represented as 2/16 in fractions.`,
 `This is an image of a face. A face has eyes for seeing, nose for smelling, ears for hearing, mouth for tasting and skin for feeling. These are the five senses.`];
 
+
 var theColor = '';
 var lineW = 5;
 let prevX = null;
@@ -27,7 +28,14 @@ function pic(){
     return`/images/${picture[promptNum]}.png`;
 }
 
+function pts(){
+    points = points + 100;
+    document.getElementById("points").innerText = points;
+    document.getElementById("points").style.display = "block";
+    console.log(points);
+    return points;
 
+}
 
 body.style.backgroundColor = "#FFFFFF";
 var theInput = document.getElementById("favcolor");
@@ -79,14 +87,31 @@ window.addEventListener("mousemove", (e) => {
     prevY = currentY;
 });
 
+let points = 0;
+
 function doneBtn(){
     if (promptNum < prompts.length) {
-        document.getElementById("prompt-img").src = `/images/${picture[promptNum]}.png`;
+        document.getElementById("prompt-img").src = pic();
         solution.classList.add('active');
         document.getElementById("prompt-text").innerText = descriptions[promptNum];
         box.classList.add('active');
+
+        // Add points per completed drawing
+        points += 10;
+        localStorage.setItem('drawingPoints', points); // Save progress
+
+        // Update prompt for next round
+        setTimeout(() => {
+            solution.classList.remove('active');
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
+            promptNum++;
+            if (promptNum < prompts.length) {
+                document.getElementById("prompt").innerText = prompts[promptNum];
+            }
+        }, 6000);
     }
 }
+
 
 function nextPrompt(){
     promptNum++;
@@ -115,3 +140,5 @@ crossBtn.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     nextPrompt();
 });
+
+
