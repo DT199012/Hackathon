@@ -3,8 +3,7 @@ const body = document.querySelector("body");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 const solution = document.querySelector('.ourPrompt');
-const prompts  = ["Draw a volcano with lava","Draw an apple falling from a tree","Draw a pizza slice","Draw a face",""]
-//["Draw a house with shapes in it.", "Draw a playground with different shapes in it."]
+const prompts  = ["Draw a volcano with lava","Draw an apple falling from a tree","Draw a pizza slice","Draw a face",""];
 const descriptions = [`This is an example of a house.
     There are different shapes such as trinagles for the roof, square for the body, rectangle for the door, and a circle for the sun.
     Let's look at another one.`, `This is a picture of a volcano.
